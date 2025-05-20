@@ -1,30 +1,6 @@
 grade_points = {"A": 4.0, "B": 3.0, "C": 2.0, "D": 1.0, "F": 0.0}
 student_list = [ ]
 
-def main_menu():
-    while True:
-        print("\n--- Student Record System ---")
-        print("1. View Course Schedule")
-        print("2. Enter New Grade")
-        print("3. Calculate GPA")
-        print("4. Show Progress")
-        print("5. Exit")
-
-        choice = input("Enter your choice: ")
-
-        if choice == "1":
-            view_course_schedule()
-        elif choice == "2":
-            enter_new_grade()
-        elif choice == "3":
-            calculate_gpa()
-        elif choice == "4":
-            show_progress()
-        elif choice == "5":
-            break
-        else:
-            print("Invalid choice. Try again.")
-
 def find_student(name):
     for student in student_list:
         if student["name"] == name:
