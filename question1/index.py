@@ -1,40 +1,44 @@
-grade_points = {"A": 4.0, "B": 3.0, "C": 2.0, "D": 1.0, "F": 0.0}
+grade_points = {"A": 4.0, "B": 3.0, "C": 2.0, "D": 1.0}
 student_list = [ ]
 
-def find_student(name):
+def student_report(student_id):
     for student in student_list:
-        if student["name"] == name:
+        if student["student_id"] == student_id:
             return student
     return None
 
-def view_course_schedule():
-    name = input("Enter student name: ")
-    student = find_student(name)
+def course_schedule():
+    student_id = input("Enter student_id: ")
+    student = student_report(student_id)
     if student:
-        print(f"Schedule for {student['name']}:")
+        print(f"Schedule for {student['student_id']}:")
         for course in student["courses"]:
             print(f"{course['name']} - Instructor: {course['instructor']} | Credits: {course['credits']}")
     else:
         print("Student not found.")
 
-def enter_new_grade():
-    name = input("Enter student name: ")
-    student = find_student(name)
-    if not student:
-        print("Student not found.")
-        return
+def new_grade():
+    student_id = input("Enter student_id: ")
+    student = student_report(student_id)
+    # if not student:
+    #     print("Student not found.")
+    #     return
     course_name = input("Enter course name: ")
-    grade = input("Enter grade (A-F): ").upper()
+    grade = input("Enter grade point: ").upper()
     for course in student["courses"]:
         if course["name"] == course_name:
             course["grade"] = grade
             print("Grade updated.")
             return
-    print("Course not found.")
+    else:
+        course["grade"]=grade
+        print("Grade added")
+        return 
+    # print("Course not found.")
 
-def calculate_gpa():
-    name = input("Enter student name: ")
-    student = find_student(name)
+def calculate_gpa(student_id):
+    # name = input("Enter student_id: ")
+    student = student_report(student_id)
     if not student:
         print("Student not found.")
         return
@@ -51,9 +55,9 @@ def calculate_gpa():
         gpa = total_points / total_credits
         print(f"GPA: {gpa:.2f}")
 
-def show_progress():
-    name = input("Enter student name: ")
-    student = find_student(name)
+def student_progress():
+    name = input("Enter student_id: ")
+    student = student_report(student_id)
     if not student:
         print("Student not found.")
         return
@@ -62,13 +66,10 @@ def show_progress():
         grade = course.get("grade", "Not graded yet")
         print(f"{course['name']} - Grade: {grade}")
 
-
 student_list.append({
-    "name": "Alice",
+    "student_id": "S001",
     "courses": [
-        {"name": "Math", "instructor": "Dr. Smith", "credits": 3},
-        {"name": "History", "instructor": "Ms. Lee", "credits": 2}
+        {"name": "Backend Development", "instructor": "Mr. Mowai", "credits": 4},
+        {"name": "DAS", "instructor": "Ms. Sharon", "credits": 4}
     ]
 })
-
-
