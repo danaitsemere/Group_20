@@ -1,0 +1,53 @@
+
+Initialize Data Structures
+
+Create a dictionary (or map) to hold grade points for each letter grade.
+Create a list (or array) to hold student records, where each record contains:
+Student ID
+Name
+List of courses (each course includes name, instructor, credits, and optional grade)
+Function: Find Student
+
+Input: Student ID
+Output: Student record (if found) or an error message
+Steps:
+Iterate through the list of student records.
+If a record with the given Student ID is found, return that record.
+If no record is found, return an error message.
+Function: View Course Schedule
+
+Input: Student ID
+Output: Course schedule for the student or an error message
+Steps:
+Call the "Find Student" function with the given Student ID.
+If the student is found, print the student's name and details of each course (name, instructor, credits).
+If not found, print an error message.
+Function: Enter New Grade
+
+Input: Student ID, Course Name, Grade
+Output: Confirmation message or error message
+Steps:
+Call the "Find Student" function with the given Student ID.
+If the student is found, search for the course by name in the student's course list.
+If the course is found, assign the provided grade to the course and print a confirmation message.
+If the course is not found, print an error message.
+Function: Calculate GPA
+
+Input: Student ID
+Output: GPA value or error message
+Steps:
+Call the "Find Student" function with the given Student ID.
+If the student is found, initialize variables for total points and total credits.
+For each course:
+If the course has a grade, convert the grade to points using the grade points dictionary.
+Accumulate the total points (grade points multiplied by credits) and total credits.
+If no grades are available, print a message indicating this.
+Otherwise, calculate the GPA as total points divided by total credits and print the result.
+Function: Show Progress
+
+Input: Student ID
+Output: Progress report for the student or an error message
+Steps:
+Call the "Find Student" function with the given Student ID.
+If the student is found, print the student's name and each course's name along with its grade (or a message indicating it's not graded yet).
+If not found, print an error message
