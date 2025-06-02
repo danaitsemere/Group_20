@@ -1,53 +1,14 @@
+Input: A hashmap with letter grades to numeric values,list of student records each containing Student ID,
+ INstructor Name, and Courses; each course includes Name,Instructor, Credits and Grade.
 
-Initialize Data Structures
+Process:
 
-Create a dictionary (or map) to hold grade points for each letter grade.
-Create a list (or array) to hold student records, where each record contains:
-Student ID
-Name
-List of courses (each course includes name, instructor, credits, and optional grade)
-Function: Find Student
+1. If student ID  is not in the student list record, indicate student is not found.
+2. If a student ID is found, proceed with the following as needed.
+3. If a course exists in the courses list Update the grade and confirm the update.
+4. If the course does not exist, allow student to add a new Course, Instructor Name, Credit , and Grade.
+5. Sum the weighted grades and Credits for courses with grades.
+6. If no grades exist, indicate no grades are available.
+7. Otherwise no grade exists, indicate no grades are available.
 
-Input: Student ID
-Output: Student record (if found) or an error message
-Steps:
-Iterate through the list of student records.
-If a record with the given Student ID is found, return that record.
-If no record is found, return an error message.
-Function: View Course Schedule
-
-Input: Student ID
-Output: Course schedule for the student or an error message
-Steps:
-Call the "Find Student" function with the given Student ID.
-If the student is found, print the student's name and details of each course (name, instructor, credits).
-If not found, print an error message.
-Function: Enter New Grade
-
-Input: Student ID, Course Name, Grade
-Output: Confirmation message or error message
-Steps:
-Call the "Find Student" function with the given Student ID.
-If the student is found, search for the course by name in the student's course list.
-If the course is found, assign the provided grade to the course and print a confirmation message.
-If the course is not found, print an error message.
-Function: Calculate GPA
-
-Input: Student ID
-Output: GPA value or error message
-Steps:
-Call the "Find Student" function with the given Student ID.
-If the student is found, initialize variables for total points and total credits.
-For each course:
-If the course has a grade, convert the grade to points using the grade points dictionary.
-Accumulate the total points (grade points multiplied by credits) and total credits.
-If no grades are available, print a message indicating this.
-Otherwise, calculate the GPA as total points divided by total credits and print the result.
-Function: Show Progress
-
-Input: Student ID
-Output: Progress report for the student or an error message
-Steps:
-Call the "Find Student" function with the given Student ID.
-If the student is found, print the student's name and each course's name along with its grade (or a message indicating it's not graded yet).
-If not found, print an error message
+Output: Student report, Course Schedule, Course lists with detail,GPA values and Progress reports
