@@ -1,14 +1,1 @@
 
-      Input: roomId, check-in date, checkout date, guestName, payment method
-      Output: bookingId, Success/failure
-      Steps:
-1. If rooms are available, and the check-in date for the booking is greater than the checkout date of the room, and the booking’s checkout date is less than the check-in date.
-2. The return booking is successful
-2. If false, create a new booking record with a new bookingId, check-in date, and checkout date 
-3. Process the payment using the payment methods.
-4. Calculate the total price based on the type of room
-5. Update the payment status as paid
-6. If the booking is successful and it is been paid, update the booking status to checked-in. 
-7. If not, checking will fail.
-8. If a booking exists, then update the booking status to checked out. 
-
