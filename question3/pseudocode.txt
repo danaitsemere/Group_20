@@ -1,19 +1,1 @@
-Input:Maximum queque limits of peak and normal times, a list representing seats availability, 
-a queue list, and a hall list.
 
-process:
-
-1. If the seat number is valid and seat is available, mark it reserved and confirm.
-2. If the seat is taken or invalid, notify the seat is not available.
-3. Determine queue limit based on time.
-4. If queue size is below limit, add person to queue.
-5. If queue is full, notify that entry is denied.
-6. If queque is not empty, remove the first person from queue.
-7. Add that person to the hall list and confirm admission.
-8. If queque is empty, notify no one is waiting.
-9. If the person is currentle in the hall.
-10. Remove them  and confirm exit.
-11. If not notify person is not inside.
-
-output:
-Confirmation or failure messages for seat reservation,queue entry,admission, and exit.
