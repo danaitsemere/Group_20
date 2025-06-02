@@ -1,1 +1,19 @@
+Book a room 
+      Input: roomId, check-in date, checkout date, guestName, payment method
+      Output: bookingId, Success/failure
+      Steps:
+Are rooms available? If yes, is the check-in date for the booking greater than the checkout date of the room? Is the booking’s checkout date less than the check-in date?
+ If no, create a new booking record with a new bookingId, check-in date, and checkout date 
+Process the payment using the payment methods, and calculate the total price based on the type of room
+Update the payment status as paid
+Checkin
+     Input: bookingid
+    Output: Success/ Failure
+    Steps:
+            Is the booking successful, and has it been paid? If yes, update the booking status to checked-in. 
+           If not, checking will fail.
+Checkout
+Input: bookindId
+Output: Success/ fail
+If a booking exists, then update the booking status to checked out. 
 
