@@ -1,4 +1,4 @@
-<h1>Algorithm:<h1>
+Algorithm:
 
 1. Create empty bookings, rooms list.
 2. If a room is available and the check date for booking is greater than the checkout of the room.
