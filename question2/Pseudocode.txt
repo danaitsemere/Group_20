@@ -12,7 +12,7 @@ Algorithm:
 
 
 
-<h1>Pseudocode:</h1>
+Pseudocode:
 Input:
 Available rooms list,empty bookings list that takes in Book Id, Guest name,Room number, check-in date, checkout date,payment satus,and check-in status.
 1. If room doesn't exist:
