@@ -1,14 +1,13 @@
-Input: A hashmap with letter grades to numeric values,list of student records each containing Student ID,
- INstructor Name, and Courses; each course includes Name,Instructor, Credits and Grade.
+Algorithm:
 
-Process:
+1. Create a hashmap with letter grades,list of student records,and courses to hold name,instructor,credits and grade.
+2. If student ID  is not in the student list record, the student is not found.
+3. If a student ID is found, proceed with the following as needed.
+4. If a course exists in the courses list Update the grade.
+5. If the course does not exist, allow student to add a new Course, Instructor Name, Credit , and Grade.
+6. Sum the weighted grades to know the total weighted grade
+7. Sum Credits for courses with grades to get know the total credits.
+7. Devide the total weighed grades by the total credits to get the GPA.
+8. If no grade exists, indicate no grades are available.
+9. Display Student report, Course Schedule, Course lists with detail,GPA values and Progress reports.
 
-1. If student ID  is not in the student list record, indicate student is not found.
-2. If a student ID is found, proceed with the following as needed.
-3. If a course exists in the courses list Update the grade and confirm the update.
-4. If the course does not exist, allow student to add a new Course, Instructor Name, Credit , and Grade.
-5. Sum the weighted grades and Credits for courses with grades.
-6. If no grades exist, indicate no grades are available.
-7. Otherwise no grade exists, indicate no grades are available.
-
-Output: Student report, Course Schedule, Course lists with detail,GPA values and Progress reports
