@@ -1,7 +1,8 @@
 Algorithm:
 
 1. Create an empty bookings and rooms list.
-2. A room is available if the check date for the  booking is greater than the checkout date of the room, and the booking’s checkout date is less than the check-in date, the booking is successful.
+2. A room is available if the check date for the  booking is greater than the checkout date of the room, and
+the booking’s checkout date is less than the check-in date, the booking is successful.
 3. Otherwise, create a new booking record with a new booking ID, check-in date, and checkout date.
 4. If payment is still pending, the booking is successful.
 5. Otherwise, the booking is successful.
@@ -13,40 +14,40 @@ Algorithm:
 
 Pseudocode:
 Input:
-Available rooms list,empty bookings list that takes in Book Id, Guest name,Room number, check-in date, checkout date,payment satus,and check-in status.
-1. If room doesn't exist:
+Available rooms list, empty bookings list that takes in Book ID, Guest name, Room number, check-in date, checkout date, payment status, and check-in status.
+1. If the room doesn't exist:
   -Display "Invalid dates"
 2. If checkout date <= check-in date:
  - Display "Invalid dates"
-3. For every bookings in target room:
+3. For every booking in the target room:
  - If new dates overlap with any existing reservation:
  -Display "room unavailable"
-4. Add bookings list with payment status:unpaid and checkin status: Not checked-in
+4. Add bookings list with payment status: unpaid, and check-in status: Not checked-in
 5. Display "Booking succesfull"
-6. Create payment that takes in Guest name.
-7. If guest hasn't paid:
-8. Rcord as paid.
+6. Create a payment that takes in the guest's name.
+7. If a guest hasn't paid:
+8. Record as paid.
 9. Display "Payment received"
 10. Else:
 11. Display "No unpaid bookings"
-12. Create check-in that takes in Guest name.
+12. Create a check-in that takes in the guest's name.
 13. If booking exists AND paid:
-14.If current date ≥ check-in date:
-   -Record as checked-in
-   -Display "Check-in successful"
+14. If the current date ≥ check-in date:
+   -Record as checked in
+   -Display "Check-in successful."
 15. Else:
    -Display "Too early for check-in"
-16. if unpaid:
+16. If unpaid:
    -Display "Payment required"
 17. Else:
     Display "No valid booking"
-18.If unpaid:
+18. If unpaid:
    -Display "payment required"
-19.Else: Display "No valid booking"
-20.Create checked out that takes in  Guest name
-21.If checjed-in booking exists:
+19. Else: Display "No valid booking"
+20. Create a check-out that takes in the  guest's name
+21. If a checked-in booking exists:
    -Mark as checked out.
    -Free the room
-   -Display "Check-out complete"
-22.Else: Display "No active"reservation
+   -Display "Check-out complete."
+22. Else: Display "No active"reservation
 
