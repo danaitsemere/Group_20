@@ -16,7 +16,7 @@ Input:
 Seat number,name,and time.
 Output:
 Reservation status,queue status,Admission status,exit confirmation.
-Reservation status messages, Queue admission,and Hall entry.
+Reservation status messages, Queue admission,and Hall entry, Hall exit.
 1. create reservation that takes in  seat nubmer.
 2. If seat number is less than zero or greater than or equal to 20:
   -Display "Invalid seat number"
