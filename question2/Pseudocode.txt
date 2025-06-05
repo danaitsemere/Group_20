@@ -1,4 +1,4 @@
-Algorithm:
+<h1>Algorithm:<h1>
 
 1. Create empty bookings, rooms list.
 2. If a room is available and the check date for booking is greater than the checkout of the room.
@@ -9,4 +9,45 @@ Algorithm:
 7. If booking is successful and it has been paid, record the booking status to checked -in.
 8. If not checking will fail.
 9. If the booking exists, then record the booking status to checked out.
+
+
+
+<h1>Pseudocode:</h1>
+Input:
+Available rooms list,empty bookings list that takes in Book Id, Guest name,Room number, check-in date, checkout date,payment satus,and check-in status.
+1. If room doesn't exist:
+  -Display "Invalid dates"
+2. If checkout date <= check-in date:
+ - Display "Invalid dates"
+3. For every bookings in target room:
+ - If new dates overlap with any existing reservation:
+ -Display "room unavailable"
+4. Add bookings list with payment status:unpaid and checkin status: Not checked-in
+5. Display "Booking succesfull"
+6. Create payment that takes in Guest name.
+7. If guest hasn't paid:
+8. Rcord as paid.
+9. Display "Payment received"
+10. Else:
+11. Display "No unpaid bookings"
+12. Create check-in that takes in Guest name.
+13. If booking exists AND paid:
+14.If current date ≥ check-in date:
+   -Record as checked-in
+   -Display "Check-in successful"
+15. Else:
+   -Display "Too early for check-in"
+16. if unpaid:
+   -Display "Payment required"
+17. Else:
+    Display "No valid booking"
+18.If unpaid:
+   -Display "payment required"
+19.Else: Display "No valid booking"
+20.Create checked out that takes in  Guest name
+21.If checjed-in booking exists:
+   -Mark as checked out.
+   -Free the room
+   -Display "Check-out complete"
+22.Else: Display "No active"reservation
 
