@@ -1,14 +1,13 @@
 Algorithm:
 
-1. Create empty bookings, rooms list.
-2. If a room is available and the check date for booking is greater than the checkout of the room.
-3. If the booking’s checkout date is less than the check-in date, the booking is successful.
-4. Otherwise create a new booking record with a new booking-id,check-in date and checkout date.
-5. If a guest didn’t pay before, record payment status.
-6. Otherwise, there is no unpaid booking.
-7. If booking is successful and it has been paid, record the booking status to checked -in.
-8. If not checking will fail.
-9. If the booking exists, then record the booking status to checked out.
+1. Create an empty bookings and rooms list.
+2. A room is available if the check date for the  booking is greater than the checkout date of the room, and the booking’s checkout date is less than the check-in date, the booking is successful.
+3. Otherwise, create a new booking record with a new booking ID, check-in date, and checkout date.
+4. If payment is still pending, the booking is successful.
+5. Otherwise, the booking is successful.
+6. Record the booking status as checked-in.
+7. If the room's checked out and the booking's checked out are equal, record the booking status as checked out.
+
 
 
 
