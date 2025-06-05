@@ -1,1 +1,49 @@
+Algorithm:
+
+1. Create a seat availability list,empty queue list, and empty hall list. 
+2. Limit maximum queue based on peak time and normal time.
+3. If the seat number is valid and the seat is available, record it as reserved.
+4. If the seat is taken or invalid, the seat is not available.
+5. If the queue size is below the maximum limit of queue type add the customer to the queue.
+6. If the queue is not empty, remove the customer from the queue.
+7. Add the customer to the hall list.
+8. If the queue is empty , no one is waiting.
+9. If the person is currently in the hall, remove them
+10. Otherwise, the person is not inside.
+
+Pseudocode:
+Input: 
+Seat number,name,and time.
+Output:
+Reservation status,queue status,Admission status,exit confirmation.
+Reservation status messages, Queue admission,and Hall entry.
+1. create reservation that takes in  seat nubmer.
+2. If seat number is less than zero or greater than or equal to 20:
+  -Display "Invalid seat number"
+3. If seat is available:
+  -Mark seat as reserved.
+  -Display "Seat is reserved"
+4.Else:
+   Display "Seat is already taken"
+5. Create queue entry that takes in customer name,time period(peak/normal).
+6. If queue has space:
+ -Add customerto queue
+ -Display " customer(name) added to the queue"
+7. Else:
+ -Display "Queue full"
+8. Create Admission to hall
+9.If queue not empty:
+ -Remove first customer  from queue.
+ -Add to hall list.
+ -Display "customer(name) entered hall"
+9. Else:
+ -Display "No one waiting"
+10.Create hall exit process that takes in customer name
+11. If customer in a hall list:
+ -Remove from hall list.
+ -Display "Customer(name) exited"
+12.Else:
+ -Display "Customer(name) not in hall".
+
+
 
