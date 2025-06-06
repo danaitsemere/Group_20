@@ -15,39 +15,41 @@ the booking’s checkout date is less than the check-in date, the booking is suc
 Pseudocode:
 Input:
 Available rooms list, empty bookings list that takes in Book ID, Guest name, Room number, check-in date, checkout date, payment status, and check-in status.
+output:
+room availability,book,check-in,payment status.
 1. If the room doesn't exist:
   -Display "Invalid dates"
 2. If checkout date <= check-in date:
- - Display "Invalid dates"
+  - Display "Invalid dates"
 3. For every booking in the target room:
- - If new dates overlap with any existing reservation:
- -Display "room unavailable"
+  - If new dates overlap with any existing reservation:
+  -Display "room unavailable"
 4. Add bookings list with payment status: unpaid, and check-in status: Not checked-in
 5. Display "Booking succesfull"
 6. Create a payment that takes in the guest's name.
 7. If a guest hasn't paid:
 8. Record as paid.
 9. Display "Payment received"
-10. Else:
+10. Otherwise:
 11. Display "No unpaid bookings"
 12. Create a check-in that takes in the guest's name.
 13. If booking exists AND paid:
 14. If the current date ≥ check-in date:
    -Record as checked in
    -Display "Check-in successful."
-15. Else:
+15. Otherwise:
    -Display "Too early for check-in"
 16. If unpaid:
    -Display "Payment required"
-17. Else:
+17. Otherwise:
     Display "No valid booking"
 18. If unpaid:
    -Display "payment required"
-19. Else: Display "No valid booking"
+19. Otherwise: Display "No valid booking"
 20. Create a check-out that takes in the  guest's name
 21. If a checked-in booking exists:
    -Mark as checked out.
    -Free the room
    -Display "Check-out complete."
-22. Else: Display "No active"reservation
+22. Otherwise: Display "No active"reservation
 
