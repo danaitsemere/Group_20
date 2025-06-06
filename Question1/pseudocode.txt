@@ -11,3 +11,34 @@ Algorithm:
 8. If no grade exists, indicate no grades are available.
 9. Display Student report, Course Schedule, Course lists with detail,GPA values and Progress reports.
 
+Pseudocode:
+Input:student_id, grade_points(Hashmap), student_list that takes in student_id,  courses list which takes in course name, instructor, credits, grade).
+Output: studebt report, course schedule, grade,GPA,progress.
+
+1.Create student report that takes in student-id.
+2.For every student in student list.
+3.If student_id is found in student list.
+  -Display student is located.
+4.Create show schedule that takes in studen .
+5.For every course in student list.
+  -Display "Course name, credits"
+6.Create add new grade that takes in student,course name,grade,credits.
+7.For every course in student list.
+8.If course is found in studen list.
+   -Display "grade for course name updated to grade"
+9.Otherwise Record course name,grade,and credits in the student list.
+  -Display course added with new grade.
+10.Create calculate GPA that takes student.
+11.Initialize total-weighed-grade with zero and total credit with zero.
+12.For every course in student list.
+13.If grade is gound in grade-points
+14.Sum (grade × credits) to total_weighted_grade.
+15.Sum credit to total credits.
+16.If total credits is equal to zero.
+  -Display "no grade is available".
+17.Otherwise calculate gpa=total weighted grade/total credits.
+  -Display GPA
+18.Create show progress that takes in student
+19.For course in student list.
+   -Display "course name, grade" 
+  
